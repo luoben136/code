@@ -1,34 +1,31 @@
 #include<iostream>
 using namespace std;
-int main()				//主函数
-{
-	int i,sum=0;		//定义变量
 
-	for(i=1;i<=10;i++)	//循环语句,i从1到10循环
+int main()
+{
+	char i;
+
+	for(i=0;i!='Y' && i!='N';i++)
 	{
-		sum+=i;			//sum=sum+i
+		cout<< "现在正在下雨吗？ 请输入Y或N" << endl;
+		cin>> i;
+
+		if(i=='Y')
+		{
+			cout<< "现在正在下雨" << endl;
+			break;
+		}
+		else if(i=='N')
+		{
+			cout<< "现在没有下雨" << endl;
+			break;
+		}
+		else
+		{
+			cout<< "输入错误，请重新输入。" << endl;
+		}
+
 	}
-
-	cout<< "sum=" << sum << endl;//输出sum的最终值
-
-	getchar();			//键盘上读入一个字符，并带回显
-	return 0;			//返回值为0，对于int类型
+	system("pause");
+	return 0;
 }
-
-/*#include<iostream>
-using namespace std;
-int main()				//主函数
-{
-	int i=1, sum=0;		//定义变量
-
-	do					//循环语句
-	{
-		sum+=i;			//sum=sum+i
-		i++;			//i从1开始循环
-	}while(i<=10);		//i的循环条件小于等于10
-
-	cout<< "sum=" << sum << endl;//输出sum的最终值
-
-	getchar();			//键盘上读入一个字符，并带回显
-	return 0;			//返回值为0，对于int类型
-}*/
